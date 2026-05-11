@@ -313,7 +313,10 @@ p { color: var(--teks-sedang); font-size: 1rem; }
 .animasi-masuk-delay-3 { animation: fadeInUp 0.65s 0.35s ease both; }
 .animasi-masuk-delay-4 { animation: fadeInUp 0.65s 0.5s ease both; }
 
-/* RESPONSIF */
+/* ============================================================
+   RESPONSIF
+   ============================================================ */
+
 @media (max-width: 992px) {
   .hero-konten { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
@@ -326,6 +329,7 @@ p { color: var(--teks-sedang); font-size: 1rem; }
   .grid-kontak { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
+
 @media (max-width: 768px) {
   .bagian { padding: 3.5rem 0; }
   .navbar-menu { display: none; }
@@ -335,7 +339,38 @@ p { color: var(--teks-sedang); font-size: 1rem; }
   .grup-formulir { grid-template-columns: 1fr; }
   .aksi-detail { flex-direction: column; }
   .aksi-detail .tombol { text-align: center; }
+
+  /* =====================================================
+     FIX MOBILE: background-attachment: fixed tidak
+     didukung dengan baik di browser Android & iOS.
+     Tanpa fix ini, background hero & header halaman
+     akan tampak aneh / keluar dari kontainer di HP.
+     ===================================================== */
+  .hero,
+  .header-halaman {
+    background-attachment: scroll;
+  }
+
+  /* Perkecil padding hero agar tidak terlalu besar di HP */
+  .hero-konten {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Tombol full-width di HP agar mudah ditekan */
+  .grup-tombol {
+    flex-direction: column;
+  }
+  .grup-tombol .tombol {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Formulir kontak padding lebih kecil */
+  .formulir-kontak {
+    padding: 1.75rem 1.25rem;
+  }
 }
+
 @media (max-width: 480px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.6rem; }
@@ -343,4 +378,13 @@ p { color: var(--teks-sedang); font-size: 1rem; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .tabel-perbandingan { font-size: 0.8rem; }
   .tabel-perbandingan th, .tabel-perbandingan td { padding: 0.75rem 0.75rem; }
+
+  /* Navbar logo: sembunyikan tagline kalau layar terlalu sempit */
+  .logo-tagline { display: none; }
+
+  /* Padding kontainer lebih kecil di HP kecil */
+  .kontainer { padding: 0 1rem; }
+
+  /* Tab button lebih kecil */
+  .tab-btn { padding: 0.7rem 0.9rem; font-size: 0.78rem; }
 }
