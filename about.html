@@ -3,184 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tentang Kami — Riya Shop</title>
+  <title>Tentang Kami &mdash; Bibit Unggul Nusantara</title>
+  <meta name="description" content="Mengenal Nina Derizca, mahasiswi Agribisnis di balik proyek Bibit Unggul Nusantara. Visi, misi, dan komitmen kami terhadap pertanian padi berkualitas." />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- ============================================================
-       HEADER / NAVBAR
-       ============================================================ -->
-  <header>
-    <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">Riya <span>Shop</span></a>
-        <ul class="nav-links">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="product.html">Produk <span class="badge-promo">Promo</span></a></li>
-          <li><a href="about.html" class="aktif">Tentang Kami</a></li>
-          <li><a href="contact.html">Kontak</a></li>
-        </ul>
-              <button class="hamburger" aria-label="Buka Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
+  <!-- NAVIGASI -->
+  <nav class="navbar">
+    <div class="navbar-dalam">
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/images/logo.jpg" alt="Logo Bibit Unggul Nusantara" style="height: 42px; width: auto;">
+        <div class="logo-teks">
+          <span class="logo-nama">Bibit Unggul Nusantara</span>
+          <span class="logo-tagline">Sentra Bibit Padi Berkualitas</span>
+        </div>
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="product.html">Produk</a></li>
+        <li><a href="about.html" class="aktif">Tentang Kami</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="product.html" class="navbar-cta">Beli Sekarang</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Buka Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Beranda</a>
+      <a href="product.html">Produk</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="contact.html">Kontak</a>
+      <a href="product.html">Beli Sekarang</a>
+    </div>
+  </nav>
 
-
-  <!-- ============================================================
-       BREADCRUMB
-       ============================================================ -->
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="index.html">Beranda</a> &rsaquo; Tentang Kami
+  <!-- HEADER HALAMAN -->
+  <div class="header-halaman">
+    <div class="kontainer">
+      <div class="breadcrumb">
+        <a href="index.html">Beranda</a>
+        <span class="pemisah">/</span>
+        <span>Tentang Kami</span>
+      </div>
+      <h1>Tentang Kami</h1>
+      <p>Kenali lebih dalam orang-orang di balik Bibit Unggul Nusantara dan komitmen kami terhadap kemajuan pertanian padi Indonesia.</p>
     </div>
   </div>
 
-
-  <!-- ============================================================
-       SECTION TENTANG KAMI
-       ============================================================ -->
-  <section class="section-about">
-    <div class="container">
-
-      <!-- Judul Section -->
-      <div class="section-judul">
-        <h2>Tentang Kami</h2>
-        <p>Kenali lebih dekat orang di balik Riya Shop</p>
-      </div>
-
-      <!-- Layout 2 Kolom -->
-      <div class="layout-about">
-
-        <!-- Kolom Kiri — Kartu Profil -->
-        <div class="kartu-profil">
-          <div class="foto-profil">
-            <img
-              src="assets/images/profile-owner.png"
-              alt="Nur Fitriyah — Pemilik Riya Shop"
-            />
+  <!-- PROFIL PENDIRI -->
+  <section class="bagian bagian-krem">
+    <div class="kontainer">
+      <div class="profil-grid">
+        <div class="profil-visual animasi-masuk">
+          <div class="foto-profil" style="background: transparent;">
+            <img src="assets/images/profil-nina.jpg" alt="Foto Nina Derizca" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-besar);" />
           </div>
-          <p class="nama-pemilik">Nur Fitriyah</p>
-          <p class="jabatan-pemilik">
-            Mahasiswi Agribisnis<br>
-            Politeknik Negeri Banyuwangi
-          </p>
-          <span class="tag-kampus">Poliwangi — Semester 2</span>
+          <div class="kartu-identitas">
+            <div class="identitas-nim">NIM: 362541311003</div>
+            <div class="identitas-nama">Nina Derizca</div>
+            <div class="identitas-prodi">Program Studi Agribisnis</div>
+          </div>
         </div>
-
-        <!-- Kolom Kanan — Konten Teks -->
-        <div class="konten-about">
-
-          <h2>Dari Ladang Petani,<br><em>Langsung ke Meja Makan Anda</em></h2>
-
+        <div class="profil-teks animasi-masuk-delay-2">
+          <div class="label-kecil">Pendiri &amp; Pengelola</div>
+          <h2>Nina Derizca</h2>
           <p>
-            Riya Shop adalah platform jual beli produk pertanian segar yang
-            menghubungkan petani lokal Banyuwangi langsung dengan konsumen.
-            Dirintis sebagai mini project studi Agribisnis, Riya Shop hadir
-            dengan semangat untuk memangkas rantai distribusi yang panjang
-            sehingga harga lebih terjangkau dan petani mendapat nilai jual
-            yang lebih layak.
+            Nina Derizca adalah mahasiswi aktif Program Studi Agribisnis yang menaruh perhatian besar pada persoalan produktivitas pangan nasional, khususnya komoditas padi sebagai sumber karbohidrat utama masyarakat Indonesia. Berlatar belakang dari keluarga petani, Nina memahami secara langsung tantangan yang dihadapi petani padi dalam memilih bibit berkualitas di tengah pasar yang penuh ketidakpastian.
           </p>
-
           <p>
-            Setiap produk yang kami jual dipilih dengan teliti — dipanen segar,
-            dikemas higienis, dan dikirim cepat agar kualitasnya sampai di
-            tangan Anda dalam kondisi terbaik. Kami percaya bahwa produk
-            pertanian lokal berkualitas tinggi layak dijangkau oleh semua orang.
+            Selama menempuh studi di bidang Agribisnis, Nina mendalami mata kuliah Manajemen Usaha Pertanian, Ekonomi Pertanian, dan Pemasaran Agribisnis, yang kesemuanya membentuk perspektif utuhnya terhadap rantai nilai komoditas pertanian. Ia meyakini bahwa kunci peningkatan produktivitas padi nasional terletak pada akses petani terhadap benih unggul bersertifikat yang terjangkau dan terpercaya.
           </p>
-
-          <!-- Daftar Misi -->
-          <div class="list-misi">
-
-            <div class="item-misi">
-              <div class="nomor-misi">1</div>
-              <div>
-                <h4>Mendukung Petani Lokal</h4>
-                <p>
-                  Setiap transaksi di Riya Shop berarti langsung mendukung
-                  kesejahteraan petani Indonesia, khususnya di wilayah Banyuwangi.
-                </p>
-              </div>
+          <p>
+            Berangkat dari keyakinan tersebut, Nina menginisiasi proyek <strong>Bibit Unggul Nusantara</strong> sebagai implementasi nyata ilmu agribisnis yang dipelajarinya. Proyek ini dirancang sebagai model bisnis distribusi benih yang berorientasi pada pemberdayaan petani kecil di wilayah Jawa Timur, dimulai dari Kabupaten Banyuwangi sebagai daerah basis operasional.
+          </p>
+          <div class="daftar-pencapaian">
+            <div class="item-pencapaian">
+              <div class="dot-pencapaian"></div>
+              <p>Mahasiswi aktif Program Studi Agribisnis dengan NIM 362541311003</p>
             </div>
-
-            <div class="item-misi">
-              <div class="nomor-misi">2</div>
-              <div>
-                <h4>Produk Organik Bebas Pestisida</h4>
-                <p>
-                  Kami hanya bermitra dengan petani yang menerapkan praktik
-                  pertanian aman, mengutamakan kesehatan konsumen dan lingkungan.
-                </p>
-              </div>
+            <div class="item-pencapaian">
+              <div class="dot-pencapaian"></div>
+              <p>Fokus kajian pada sistem pemasaran komoditas pangan dan manajemen rantai pasok pertanian</p>
             </div>
-
-            <div class="item-misi">
-              <div class="nomor-misi">3</div>
-              <div>
-                <h4>Harga Transparan dan Adil</h4>
-                <p>
-                  Tanpa perantara berlebih, harga lebih hemat untuk pembeli
-                  dan keuntungan lebih besar bagi petani.
-                </p>
-              </div>
+            <div class="item-pencapaian">
+              <div class="dot-pencapaian"></div>
+              <p>Melakukan riset pasar benih padi di Kabupaten Banyuwangi sebagai dasar pengembangan bisnis</p>
             </div>
-
-            <div class="item-misi">
-              <div class="nomor-misi">4</div>
-              <div>
-                <h4>Pengiriman ke Seluruh Wilayah</h4>
-                <p>
-                  Kami berkomitmen mengantarkan produk segar ke pintu rumah
-                  Anda, ke mana pun Anda berada.
-                </p>
-              </div>
+            <div class="item-pencapaian">
+              <div class="dot-pencapaian"></div>
+              <p>Aktif dalam kegiatan penyuluhan pertanian bersama komunitas petani muda Jawa Timur</p>
             </div>
-
-          </div><!-- /list-misi -->
-
-          <a href="contact.html" class="btn-utama" style="align-self: flex-start;">
-            Hubungi Kami
-          </a>
-
-        </div><!-- /konten-about -->
-      </div><!-- /layout-about -->
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- LATAR BELAKANG PROYEK -->
+  <section class="bagian bagian-putih">
+    <div class="kontainer">
+      <div class="judul-bagian">
+        <div class="label-kecil">Latar Belakang</div>
+        <h2>Mengapa Proyek Ini Lahir</h2>
+        <div class="garis-emas"></div>
+      </div>
+      <div style="max-width: 820px; margin: 0 auto;">
+        <p style="font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.25rem;">
+          Indonesia sebagai negara agraris menghadapi tekanan ganda: meningkatnya kebutuhan pangan seiring pertumbuhan penduduk di satu sisi, dan stagnasinya produktivitas padi petani di sisi lain. Salah satu akar persoalan yang kerap diabaikan adalah minimnya akses petani kecil terhadap benih bermutu tinggi. Banyak petani masih menggunakan benih turunan (bukan benih berlabel) yang daya kecambahnya rendah dan kemurnian varietasnya tidak terjamin.
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.25rem;">
+          Di Kabupaten Banyuwangi, kondisi ini terasa nyata. Berdasarkan pengamatan lapangan yang dilakukan Nina selama kegiatan Kuliah Kerja Nyata (KKN), ditemukan bahwa sebagian besar petani di wilayah pedesaan membeli benih dari kios informal tanpa keterangan sertifikasi yang jelas. Akibatnya, potensi hasil panen tidak optimal dan risiko serangan hama meningkat karena varietas yang digunakan tidak sesuai dengan kondisi lahan setempat.
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.25rem;">
+          Bibit Unggul Nusantara hadir sebagai respons akademis dan praktis terhadap persoalan tersebut. Dengan menggabungkan pendekatan ilmiah dalam pemilihan varietas dan model distribusi yang efisien, proyek ini berupaya menjadi jembatan antara lembaga perbenihan resmi dengan petani di tingkat lapangan. Setiap produk yang kami distribusikan disertai informasi teknis yang komprehensif agar petani dapat mengoptimalkan penggunaannya.
+        </p>
+        <div style="background: rgba(45, 106, 79, 0.06); border-left: 4px solid var(--hijau-muda); border-radius: 0 var(--radius-kecil) var(--radius-kecil) 0; padding: 1.5rem 1.75rem; margin-top: 2rem;">
+          <p style="font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--hijau-tua); line-height: 1.7; margin: 0;">
+            "Kemajuan pertanian Indonesia tidak ditentukan oleh luas lahan semata, melainkan oleh kualitas benih yang ditanam dan pengetahuan petani yang mengolahnya. Kami hadir untuk memastikan keduanya terpenuhi."
+          </p>
+          <p style="margin-top: 1rem; font-size: 0.85rem; font-weight: 700; color: var(--emas); letter-spacing: 0.05em; margin-bottom: 0;">
+            &mdash; Nina Derizca, Pendiri Bibit Unggul Nusantara
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer>
-    <div class="container">
-      <div class="footer-isi">
-        <span class="footer-logo">Riya <span>Shop</span></span>
-        <p>&copy; 2026 Riya Shop — Agribisnis</p>
-        <p>Dibuat oleh Nur Fitriyah — Poliwangi Semester 2</p>
+  <!-- VISI MISI -->
+  <section class="bagian bagian-abu">
+    <div class="kontainer">
+      <div class="judul-bagian">
+        <div class="label-kecil">Arah dan Tujuan</div>
+        <h2>Visi dan Misi</h2>
+        <div class="garis-emas"></div>
+      </div>
+      <div class="grid-visi-misi">
+        <div class="kartu-visi-misi visi">
+          <h3>Visi</h3>
+          <p style="font-size: 1.0rem; line-height: 1.75; color: var(--teks-sedang);">
+            Menjadi distributor bibit padi unggul bersertifikat yang paling terpercaya di Jawa Timur pada tahun 2030, dengan kontribusi nyata terhadap peningkatan produktivitas padi dan kesejahteraan petani melalui pendekatan agribisnis yang berkelanjutan, berbasis riset, dan berorientasi pada petani kecil.
+          </p>
+        </div>
+        <div class="kartu-visi-misi misi">
+          <h3>Misi</h3>
+          <ul class="daftar-misi">
+            <li>
+              <span class="nomor-misi">1</span>
+              Mendistribusikan bibit padi varietas unggul bersertifikat BPSB dengan harga yang terjangkau dan transparan kepada petani di seluruh wilayah Jawa Timur.
+            </li>
+            <li>
+              <span class="nomor-misi">2</span>
+              Memberikan pendampingan teknis budidaya padi kepada setiap petani mitra, mencakup panduan pemupukan, pengelolaan hama terpadu, dan manajemen air irigasi.
+            </li>
+            <li>
+              <span class="nomor-misi">3</span>
+              Membangun jaringan distribusi yang kuat antara lembaga perbenihan resmi, penangkar lokal, dan petani konsumen akhir guna mempersingkat rantai pasok benih.
+            </li>
+            <li>
+              <span class="nomor-misi">4</span>
+              Menerapkan prinsip-prinsip agribisnis berkelanjutan yang memperhatikan aspek ekonomi, sosial, dan kelestarian lingkungan dalam setiap kegiatan operasional.
+            </li>
+            <li>
+              <span class="nomor-misi">5</span>
+              Berkontribusi aktif pada pengembangan pengetahuan pertanian melalui edukasi dan penyuluhan bagi komunitas petani, khususnya generasi muda yang bergerak di sektor pertanian.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NILAI-NILAI -->
+  <section class="bagian bagian-krem">
+    <div class="kontainer">
+      <div class="judul-bagian">
+        <div class="label-kecil">Landasan Kerja</div>
+        <h2>Nilai-Nilai yang Kami Junjung</h2>
+        <div class="garis-emas"></div>
+      </div>
+      <div class="grid-keunggulan">
+        <div class="kartu-keunggulan">
+          <div class="ikon-keunggulan">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>Integritas</h3>
+          <p>Kami berkomitmen untuk selalu jujur dalam setiap informasi produk yang kami sampaikan. Tidak ada klaim yang berlebihan melebihi data sertifikasi dan uji lapangan yang telah terdokumentasi secara resmi.</p>
+        </div>
+        <div class="kartu-keunggulan">
+          <div class="ikon-keunggulan">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Kualitas</h3>
+          <p>Standar mutu benih kami tidak pernah dikompromikan. Setiap lot benih yang keluar dari gudang kami telah melewati proses pengujian laboratorium untuk memverifikasi daya kecambah dan tingkat kemurnian varietas.</p>
+        </div>
+        <div class="kartu-keunggulan">
+          <div class="ikon-keunggulan">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Keberpihakan pada Petani</h3>
+          <p>Setiap keputusan bisnis kami selalu mempertimbangkan dampaknya bagi petani mitra. Kami percaya bahwa kesejahteraan petani adalah ukuran keberhasilan bisnis agribisnis yang sesungguhnya.</p>
+        </div>
+        <div class="kartu-keunggulan">
+          <div class="ikon-keunggulan">
+            <svg viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+          </div>
+          <h3>Keberlanjutan</h3>
+          <p>Kami mendorong penggunaan varietas yang adaptif terhadap perubahan iklim dan meminimalkan ketergantungan pada input kimia berlebihan, demi menjaga kesehatan ekosistem sawah jangka panjang.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="spanduk-cta">
+    <div class="kontainer">
+      <div class="label-kecil" style="color: rgba(255,255,255,0.6);">Bergabung Bersama Kami</div>
+      <h2 style="color: var(--putih); margin: 1rem 0;">Jadilah Bagian dari Gerakan Pertanian Berkualitas</h2>
+      <p>Hubungi kami untuk informasi produk, konsultasi teknis, atau untuk memulai kemitraan distribusi bibit di wilayah Anda.</p>
+      <div class="grup-tombol" style="justify-content: center;">
+        <a href="contact.html" class="tombol tombol-emas">Hubungi Kami</a>
+        <a href="product.html" class="tombol tombol-outline-putih">Lihat Produk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="kontainer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-nama">Bibit Unggul Nusantara</div>
+          <div class="logo-tagline" style="margin-bottom: 1rem;">Sentra Bibit Padi Berkualitas</div>
+          <p>Mendukung ketahanan pangan nasional melalui distribusi bibit padi unggul bersertifikat kepada petani di seluruh Jawa Timur.</p>
+          <div class="sosial-links">
+            <a href="#" class="sosial-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="sosial-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="sosial-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-judul">Tautan Cepat</div>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="product.html">Katalog Produk</a></li>
+            <li><a href="detail-inpari.html">Inpari 32 HDB</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="contact.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-judul">Varietas Kami</div>
+          <ul class="footer-link-list">
+            <li><a href="detail-inpari.html">Inpari 32 HDB</a></li>
+            <li><a href="product.html">Ciherang</a></li>
+            <li><a href="product.html">IR64</a></li>
+            <li><a href="product.html">Mapan 05</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-judul">Kontak Kami</div>
+          <div class="footer-kontak-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Jl. Raya Rogojampi No. 14, Banyuwangi, Jawa Timur 68462
+          </div>
+          <div class="footer-kontak-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.28h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9a16 16 0 006.29 6.29l.61-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +62 812-3456-7890
+          </div>
+          <div class="footer-kontak-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@bibitunggulnusantara.id
+          </div>
+        </div>
+      </div>
+      <div class="footer-bawah">
+        <p>&copy; 2025 Bibit Unggul Nusantara. Seluruh hak cipta dilindungi undang-undang.</p>
+        <p class="footer-nim">Dikembangkan oleh Nina Derizca &mdash; NIM 362541311003 &mdash; Program Studi Agribisnis</p>
       </div>
     </div>
   </footer>
 
   <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks  = document.querySelector(".nav-links");
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("aktif");
-      navLinks.classList.toggle("terbuka");
-      document.body.style.overflow = navLinks.classList.contains("terbuka") ? "hidden" : "";
-    });
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("aktif");
-        navLinks.classList.remove("terbuka");
-        document.body.style.overflow = "";
-      });
-    });
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('terbuka');
+    }
   </script>
 </body>
 </html>

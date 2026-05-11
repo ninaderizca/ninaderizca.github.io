@@ -1,161 +1,323 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Katalog Produk — Riya Shop</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Produk — Bibit Unggul Nusantara</title>
+    <meta name="description" content="Katalog lengkap varietas bibit padi unggul: Inpari 32, Ciherang, IR64, Mapan 05. Bersertifikat BPSB, daya kecambah tinggi." />
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-  <!-- ============================================================
-       HEADER / NAVBAR
-       ============================================================ -->
-  <header>
-    <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img src="assets/images/logo.png" alt="Logo Riya Shop" />
-          Riya <span>Shop</span>
-        </a>
-        <ul class="nav-links">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="product.html" class="aktif">Produk <span class="badge-promo">Promo</span></a></li>
-          <li><a href="about.html">Tentang Kami</a></li>
-          <li><a href="contact.html">Kontak</a></li>
-        </ul>
-              <button class="hamburger" aria-label="Buka Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-
-  <!-- ============================================================
-       BREADCRUMB
-       ============================================================ -->
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="index.html">Beranda</a> &rsaquo; Katalog Produk
-    </div>
-  </div>
-
-
-  <!-- ============================================================
-       SECTION KATALOG PRODUK — semua produk dalam grid
-       ============================================================ -->
-  <section class="section-produk">
-    <div class="container">
-
-      <div class="section-judul">
-        <h2>Katalog Produk Kami</h2>
-        <p>Semua produk segar langsung dari petani lokal Banyuwangi</p>
-      </div>
-
-      <!-- Grid semua produk — setiap href mengarah ke halaman detailnya masing-masing -->
-      <div class="grid-produk">
-
-        <!-- Cabai Merah -->
-        <div class="kartu-produk">
-          <div class="kartu-gambar">
-            <img src="assets/images/cabai.png" alt="Cabai Merah Segar 1 kg" />
-            <span class="kartu-badge merah">Promo</span>
-          </div>
-          <div class="kartu-info">
-            <p class="kartu-nama">Cabai Merah Segar 1 kg</p>
-            <p class="kartu-harga">Rp 25.000</p>
-            <p class="kartu-deskripsi">
-              Panen hari ini, segar dan pedas alami dari kebun petani lokal.
-            </p>
-            <a href="detail-cabai.html" class="btn-utama">Lihat Detail</a>
-          </div>
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+        <div class="navbar-dalam">
+            <a href="index.html" class="navbar-logo">
+        <img src="assets/images/logo.jpg" alt="Logo Bibit Unggul Nusantara" style="height: 42px; width: auto;">
+        <div class="logo-teks">
+          <span class="logo-nama">Bibit Unggul Nusantara</span>
+          <span class="logo-tagline">Sentra Bibit Padi Berkualitas</span>
         </div>
-
-        <!-- Brokoli -->
-        <div class="kartu-produk">
-          <div class="kartu-gambar">
-            <img src="assets/images/brokoli.png" alt="Brokoli Organik 500 g" />
-            <span class="kartu-badge">Organik</span>
-          </div>
-          <div class="kartu-info">
-            <p class="kartu-nama">Brokoli Organik 500 g</p>
-            <p class="kartu-harga">Rp 18.000</p>
-            <p class="kartu-deskripsi">
-              Brokoli segar kaya vitamin, dipanen pagi, sampai masih renyah.
-            </p>
-            <a href="detail-brokoli.html" class="btn-utama">Lihat Detail</a>
-          </div>
+      </a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="product.html" class="aktif">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="product.html" class="navbar-cta">Beli Sekarang</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Buka Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-
-        <!-- Tomat Cherry -->
-        <div class="kartu-produk">
-          <div class="kartu-gambar">
-            <img src="assets/images/tomat.png" alt="Tomat Cherry 250 g" />
-            <span class="kartu-badge">Organik</span>
-          </div>
-          <div class="kartu-info">
-            <p class="kartu-nama">Tomat Cherry 250 g</p>
-            <p class="kartu-harga">Rp 12.000</p>
-            <p class="kartu-deskripsi">
-              Manis segar, cocok untuk salad dan masakan sehari-hari.
-            </p>
-            <a href="detail-tomat.html" class="btn-utama">Lihat Detail</a>
-          </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Beranda</a>
+            <a href="product.html">Produk</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="contact.html">Kontak</a>
+            <a href="product.html">Beli Sekarang</a>
         </div>
+    </nav>
 
-        <!-- Bawang Merah -->
-        <div class="kartu-produk">
-          <div class="kartu-gambar">
-            <img src="assets/images/bawang.png" alt="Bawang Merah 1 kg" />
-          </div>
-          <div class="kartu-info">
-            <p class="kartu-nama">Bawang Merah 1 kg</p>
-            <p class="kartu-harga">Rp 30.000</p>
-            <p class="kartu-deskripsi">
-              Bawang merah lokal pilihan, kering sempurna, aroma kuat alami.
-            </p>
-            <a href="detail-bawang.html" class="btn-utama">Lihat Detail</a>
-          </div>
+    <!-- HEADER HALAMAN -->
+    <div class="header-halaman">
+        <div class="kontainer">
+            <div class="breadcrumb">
+                <a href="index.html">Beranda</a>
+                <span class="pemisah">/</span>
+                <span>Katalog Produk</span>
+            </div>
+            <h1>Katalog Bibit Padi Unggul</h1>
+            <p>Temukan varietas yang paling sesuai dengan kondisi lahan dan target produktivitas pertanian Anda.</p>
         </div>
-
-      </div><!-- /grid-produk -->
-
     </div>
-  </section>
 
+    <!-- KATALOG PRODUK -->
+    <section class="bagian bagian-krem">
+        <div class="kontainer">
+            <!-- Filter -->
+            <div class="filter-produk">
+                <button class="filter-btn aktif" onclick="filterProduk(this, 'semua')">Semua Varietas</button>
+                <button class="filter-btn" onclick="filterProduk(this, 'irigasi')">Lahan Irigasi</button>
+                <button class="filter-btn" onclick="filterProduk(this, 'tadah-hujan')">Tadah Hujan</button>
+                <button class="filter-btn" onclick="filterProduk(this, 'genjah')">Umur Genjah</button>
+            </div>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer>
-    <div class="container">
-      <div class="footer-isi">
-        <span class="footer-logo">Riya <span>Shop</span></span>
-        <p>&copy; 2026 Riya Shop — Agribisnis</p>
-        <p>Dibuat oleh Nur Fitriyah — Poliwangi Semester 2</p>
-      </div>
-    </div>
-  </footer>
+            <!-- Grid Produk -->
+            <div class="grid-produk" id="gridProduk">
+                <!-- Produk 1: Inpari 32 HDB -->
+                <div class="kartu-produk" data-kategori="irigasi genjah">
+                    <div class="kartu-produk-gambar" style="background: transparent;">
+                        <img src="assets/images/inpari32.jpg" alt="Bibit Padi Inpari 32 HDB" style="width: 100%; height: 100%; object-fit: cover;" />
+                        <div class="lencana-varietas">Terlaris</div>
+                    </div>
+                    <div class="kartu-produk-isi">
+                        <h3>Inpari 32 HDB</h3>
+                        <div class="varietas-latin">Oryza sativa L.</div>
+                        <p>Varietas andalan dengan potensi hasil panen hingga 8,42 ton GKG per hektar. Tahan wereng batang cokelat dan hawar daun bakteri.</p>
+                        <div class="harga-produk">Rp 85.000 <span>/ kg</span></div>
+                        <div class="kartu-produk-aksi">
+                            <a href="detail-inpari.html" class="tombol tombol-sekunder">Detail Lengkap</a>
+                            <a href="contact.html" class="tombol tombol-primer">Pesan</a>
+                        </div>
+                    </div>
+                </div>
 
-  <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks  = document.querySelector(".nav-links");
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("aktif");
-      navLinks.classList.toggle("terbuka");
-      document.body.style.overflow = navLinks.classList.contains("terbuka") ? "hidden" : "";
-    });
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("aktif");
-        navLinks.classList.remove("terbuka");
-        document.body.style.overflow = "";
-      });
-    });
-  </script>
+                <!-- Produk 2: Ciherang -->
+                <div class="kartu-produk" data-kategori="irigasi">
+                    <div class="kartu-produk-gambar" style="background: transparent;">
+                        <img src="assets/images/ciherang.jpg" alt="Bibit Padi Ciherang" style="width: 100%; height: 100%; object-fit: cover;" />
+                        <div class="lencana-varietas">Populer</div>
+                    </div>
+                    <div class="kartu-produk-isi">
+                        <h3>Ciherang</h3>
+                        <div class="varietas-latin">Oryza sativa L.</div>
+                        <p>Varietas klasik yang tetap diminati karena kualitas beras pulen premium. Produktivitas konsisten di lahan irigasi teknis dengan umur panen 116-125 hari.</p>
+                        <div class="harga-produk">Rp 72.000 <span>/ kg</span></div>
+                        <div class="kartu-produk-aksi">
+                            <a href="contact.html" class="tombol tombol-sekunder">Detail Lengkap</a>
+                            <a href="contact.html" class="tombol tombol-primer">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 3: IR64 -->
+                <div class="kartu-produk" data-kategori="irigasi genjah">
+                    <div class="kartu-produk-gambar" style="background: transparent;">
+                        <img src="assets/images/ir64.jpg" alt="Bibit Padi IR64" style="width: 100%; height: 100%; object-fit: cover;" />
+                        <div class="lencana-varietas">Ekonomis</div>
+                    </div>
+                    <div class="kartu-produk-isi">
+                        <h3>IR64</h3>
+                        <div class="varietas-latin">Oryza sativa L.</div>
+                        <p>Pilihan andalan untuk lahan irigasi dengan harga terjangkau. Toleran kerebahan, umur genjah 110-120 hari, dan hasil stabil di berbagai musim tanam.</p>
+                        <div class="harga-produk">Rp 58.000 <span>/ kg</span></div>
+                        <div class="kartu-produk-aksi">
+                            <a href="contact.html" class="tombol tombol-sekunder">Detail Lengkap</a>
+                            <a href="contact.html" class="tombol tombol-primer">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 4: Mapan 05 -->
+                <div class="kartu-produk" data-kategori="tadah-hujan">
+                    <div class="kartu-produk-gambar" style="background: transparent;">
+                        <img src="assets/images/mapan05.jpg" alt="Bibit Padi Mapan 05" style="width: 100%; height: 100%; object-fit: cover;" />
+                        <div class="lencana-varietas">Unggulan Baru</div>
+                    </div>
+                    <div class="kartu-produk-isi">
+                        <h3>Mapan 05</h3>
+                        <div class="varietas-latin">Oryza sativa L.</div>
+                        <p>Varietas toleran kekeringan untuk lahan tadah hujan. Mempertahankan produksi pada kondisi defisit air dengan ketahanan baik terhadap penyakit blast daun.</p>
+                        <div class="harga-produk">Rp 90.000 <span>/ kg</span></div>
+                        <div class="kartu-produk-aksi">
+                            <a href="contact.html" class="tombol tombol-sekunder">Detail Lengkap</a>
+                            <a href="contact.html" class="tombol tombol-primer">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABEL PERBANDINGAN -->
+    <section class="bagian bagian-putih">
+        <div class="kontainer">
+            <div class="judul-bagian">
+                <div class="label-kecil">Panduan Pemilihan</div>
+                <h2>Perbandingan Spesifikasi Varietas</h2>
+                <p>Tabel berikut memudahkan Anda membandingkan karakteristik utama setiap varietas secara ringkas dan objektif.</p>
+                <div class="garis-emas"></div>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="tabel-perbandingan">
+                    <thead>
+                        <tr>
+                            <th>Varietas</th>
+                            <th>Umur Panen</th>
+                            <th>Potensi Hasil</th>
+                            <th>Tipe Lahan</th>
+                            <th>Tekstur Beras</th>
+                            <th>Ketahanan Utama</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Inpari 32 HDB</strong></td>
+                            <td>114–119 hari</td>
+                            <td>8,42 ton/ha GKG</td>
+                            <td>Irigasi</td>
+                            <td>Pulen</td>
+                            <td>WBC Biotipe 1 & 2, HDB</td>
+                            <td><span class="lencana-tabel lencana-unggul">Unggulan</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ciherang</strong></td>
+                            <td>116–125 hari</td>
+                            <td>6,0 ton/ha GKG</td>
+                            <td>Irigasi</td>
+                            <td>Sangat Pulen</td>
+                            <td>WBC Biotipe 2 & 3</td>
+                            <td><span class="lencana-tabel lencana-populer">Populer</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>IR64</strong></td>
+                            <td>110–120 hari</td>
+                            <td>5,0 ton/ha GKG</td>
+                            <td>Irigasi</td>
+                            <td>Pera</td>
+                            <td>Toleran Kerebahan</td>
+                            <td><span class="lencana-tabel lencana-populer">Ekonomis</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mapan 05</strong></td>
+                            <td>120–130 hari</td>
+                            <td>5,8 ton/ha GKG</td>
+                            <td>Tadah Hujan</td>
+                            <td>Sedang</td>
+                            <td>Toleran Kekeringan, Blast</td>
+                            <td><span class="lencana-tabel lencana-unggul">Unggulan</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.82rem; color: var(--abu); text-align: center;">
+                Keterangan: GKG = Gabah Kering Giling. WBC = Wereng Batang Cokelat. HDB = Hawar Daun Bakteri. Data mengacu pada deskripsi varietas resmi Kementerian Pertanian RI.
+            </p>
+        </div>
+    </section>
+
+    <!-- INFO PEMESANAN -->
+    <section class="bagian bagian-abu">
+        <div class="kontainer">
+            <div class="judul-bagian">
+                <div class="label-kecil">Cara Pemesanan</div>
+                <h2>Proses Pemesanan yang Mudah dan Terpercaya</h2>
+                <div class="garis-emas"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                <div class="kartu-keunggulan">
+                    <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--hijau-sedang); margin-bottom: 0.75rem; line-height: 1;">01</div>
+                    <h3>Konsultasi Varietas</h3>
+                    <p>Hubungi tim agronomis kami melalui telepon atau WhatsApp untuk mendapatkan rekomendasi varietas yang tepat sesuai kondisi lahan Anda.</p>
+                </div>
+                <div class="kartu-keunggulan">
+                    <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--hijau-sedang); margin-bottom: 0.75rem; line-height: 1;">02</div>
+                    <h3>Konfirmasi Pesanan</h3>
+                    <p>Kami akan menyiapkan penawaran harga resmi (quotation) beserta estimasi ketersediaan stok dan jadwal pengiriman ke lokasi Anda.</p>
+                </div>
+                <div class="kartu-keunggulan">
+                    <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--hijau-sedang); margin-bottom: 0.75rem; line-height: 1;">03</div>
+                    <h3>Pembayaran</h3>
+                    <p>Proses pembayaran dapat dilakukan melalui transfer bank atau tunai langsung di gudang kami. Tersedia opsi cicilan untuk pembelian di atas 100 kg.</p>
+                </div>
+                <div class="kartu-keunggulan">
+                    <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--hijau-sedang); margin-bottom: 0.75rem; line-height: 1;">04</div>
+                    <h3>Pengiriman</h3>
+                    <p>Bibit dikirim menggunakan armada berpendingin untuk menjaga viabilitas benih. Pengiriman menjangkau seluruh wilayah Jawa Timur dalam 1-3 hari kerja.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="contact.html" class="tombol tombol-primer">Mulai Konsultasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="kontainer">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-nama">Bibit Unggul Nusantara</div>
+                    <div class="logo-tagline" style="margin-bottom: 1rem;">Sentra Bibit Padi Berkualitas</div>
+                    <p>Mendukung ketahanan pangan nasional melalui distribusi bibit padi unggul bersertifikat kepada petani di seluruh Jawa Timur.</p>
+                    <div class="sosial-links">
+                        <a href="#" class="sosial-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" class="sosial-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" class="sosial-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-judul">Tautan Cepat</div>
+                    <ul class="footer-link-list">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="product.html">Katalog Produk</a></li>
+                        <li><a href="detail-inpari.html">Inpari 32 HDB</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-judul">Varietas Kami</div>
+                    <ul class="footer-link-list">
+                        <li><a href="detail-inpari.html">Inpari 32 HDB</a></li>
+                        <li><a href="product.html">Ciherang</a></li>
+                        <li><a href="product.html">IR64</a></li>
+                        <li><a href="product.html">Mapan 05</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-judul">Kontak Kami</div>
+                    <div class="footer-kontak-item">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Jl. Raya Rogojampi No. 14, Banyuwangi, Jawa Timur 68462
+                    </div>
+                    <div class="footer-kontak-item">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.28h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9a16 16 0 006.29 6.29l.61-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        +62 812-3456-7890
+                    </div>
+                    <div class="footer-kontak-item">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        info@bibitunggulnusantara.id
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bawah">
+                <p>&copy; 2025 Bibit Unggul Nusantara. Seluruh hak cipta dilindungi undang-undang.</p>
+                <p class="footer-nim">Dikembangkan oleh Nina Derizca — NIM 362541311003 — Program Studi Agribisnis</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('terbuka');
+        }
+
+        function filterProduk(btn, kategori) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('aktif'));
+            btn.classList.add('aktif');
+
+            const kartu = document.querySelectorAll('#gridProduk .kartu-produk');
+            kartu.forEach(k => {
+                if (kategori === 'semua') {
+                    k.style.display = 'flex';
+                } else {
+                    const kats = k.dataset.kategori || '';
+                    k.style.display = kats.includes(kategori) ? 'flex' : 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
