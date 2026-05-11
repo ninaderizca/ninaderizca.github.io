@@ -262,7 +262,14 @@ p { color: var(--teks-sedang); font-size: 1rem; }
 .ikon-kontak { width: 44px; height: 44px; background: rgba(45, 106, 79, 0.1); border-radius: var(--radius-kecil); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .ikon-kontak svg { width: 22px; height: 22px; stroke: var(--hijau-sedang); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .kontak-detail h4 { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--abu); margin-bottom: 0.35rem; }
-.kontak-detail p, .kontak-detail a { font-size: 0.95rem; color: var(--teks-gelap); font-weight: 400; line-height: 1.55; }
+.kontak-detail p, .kontak-detail a { 
+    font-size: 0.95rem; 
+    color: var(--teks-gelap); 
+    font-weight: 400; 
+    line-height: 1.55; 
+    word-break: break-all; /* INI FIX-NYA: Memaksa teks panjang turun ke bawah */
+    overflow-wrap: anywhere; /* INI FIX-NYA: Memastikan elemen tidak melebar */
+}
 .kontak-detail a:hover { color: var(--hijau-sedang); }
 .tabel-jadwal { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
 .tabel-jadwal td { padding: 0.4rem 0; font-size: 0.88rem; color: var(--teks-sedang); }
